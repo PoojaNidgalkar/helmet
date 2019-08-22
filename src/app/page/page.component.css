@@ -1,0 +1,43 @@
+.numberCircle {
+    border-radius: 50%;
+   
+  
+    width: 25px;
+    height: 25px;
+    padding: 8px;
+ 
+    border: 2px solid #666;
+   
+    text-align: center;
+  
+    font: 32px Arial, sans-serif;
+}
+
+.body { font-size: 10px; }
+
+
+.cropcircle{
+    width: 400px;
+    height: 400px;
+   margin: 50px;
+   border: 1px solid rgb(134, 131, 131);
+    border-radius: 100%;
+    background: rgb(230, 227, 227) no-repeat center;
+    background-size: cover;
+}
+
+#image1{
+    background-image: url(/assets/images/helm.png);
+   }
+ 
+
+.bg-neon-green{
+    background:  #39ff14;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+  }
