@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +13,13 @@ export class LoginComponent{
     password: null,
     
   };
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   onSubmit(){
-    console.log(this.form)
+    return this.http.post('http://192.168.29.28:8000',this.form).subscribe(
+    data => console.log(data),
+    error  => console.log(error)
+    );
    }
+
 }

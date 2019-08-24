@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { EditorModule } from '@tinymce/tinymce-angular';
+
 
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,8 +9,7 @@ import {FormComponent } from './form/form.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule }   from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
-
-
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,8 @@ import { SignupComponent } from './signup/signup.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    EditorModule
+    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
