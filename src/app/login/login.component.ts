@@ -1,25 +1,45 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { TokenService } from 'src/app/services/token.service';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent{
-  public form = 
-  {
-    email : null,
+export class LoginComponent implements OnInit {
+
+  public form = {
+    grant_type : 'password',
+    client_id : environment.client_id,
+    client_secret : environment.client_secret,
+    email: null,
     password: null,
-    
+    scope : '',
   };
-  constructor(private http:HttpClient) { }
+  public error = null;
+  constructor(
+    private userService: UserService,
+    private token: TokenService,
+    private router: Router
+  ) { }
 
-  onSubmit(){
-    return this.http.post('http://192.168.29.28:8000',this.form).subscribe(
-    data => console.log(data),
-    error  => console.log(error)
+  ngOnInit() {
+  }
+  onSubmit() {
+    console.log(this.form);
+    this.userService.login(this.form).subscribe(
+      data => this.handleResponse(data),
+      error => this.handelError(error)
     );
-   }
-
+  }
+  handleResponse(data) {
+    this.token.setToken(data);
+    this.router.navigateByUrl('/clients');
+  }
+  handelError(error) {
+    this.error = error.error.error;
+  }
 }
