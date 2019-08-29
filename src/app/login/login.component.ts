@@ -15,14 +15,14 @@ export class LoginComponent implements OnInit {
     grant_type : 'password',
     client_id : environment.client_id,
     client_secret : environment.client_secret,
-    email: null,
+    username: null,
     password: null,
     scope : '',
   };
   public error = null;
   constructor(
     private userService: UserService,
-    private token: TokenService,
+    private token: TokenService, //to give handleResponse service to token 
     private router: Router
   ) { }
 
@@ -31,13 +31,14 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     console.log(this.form);
     this.userService.login(this.form).subscribe(
-      data => this.handleResponse(data),
+
+      data => this.handleResponse(data), //if the service is successfull
       error => this.handelError(error)
     );
   }
   handleResponse(data) {
     this.token.setToken(data);
-    this.router.navigateByUrl('/clients');
+    this.router.navigateByUrl('/products');
   }
   handelError(error) {
     this.error = error.error.error;

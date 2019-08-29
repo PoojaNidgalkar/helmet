@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
   public form = {
-   name:null,
+     name:null,
     
-    email: null,
+     email: null,
      
      password: null,
      password_confirmation:null

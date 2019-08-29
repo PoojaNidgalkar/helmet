@@ -15,6 +15,7 @@ export class UserService {
     ) { }
 //send data 
   login(data) {
+    console.log(data);
     return this.http.post(`${this.baseUrl}/oauth/token`, data);
   }
   signup(data) {
@@ -33,4 +34,10 @@ export class UserService {
   updateProfile(data) {
     return this.http.post(`${this.baseUrl}/api/profile`, data);
   }
+ 
+ 
+
+  
+
+
 }

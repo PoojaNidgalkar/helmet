@@ -11,6 +11,10 @@ import { FormsModule }   from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateComponent } from './products/create/create.component';
+import { ProductsComponent } from './products/products.component';
+import { EditComponent } from './products/edit/edit.component';
+import { ShowComponent } from './products/show/show.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { ProfileComponent } from './profile/profile.component';
     PageComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateComponent,
+    ProductsComponent,
+    EditComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,

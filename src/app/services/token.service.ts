@@ -16,14 +16,20 @@ export class TokenService {
   };
 
   constructor(private http: HttpClient) { }
+  //to retriew token
+  
   getToken() {
     return localStorage.getItem('access_token');
   }
+
+  //to set or to store token
   setToken(data) {
     localStorage.setItem('access_token', data.access_token);
     localStorage.setItem('refresh_token', data.refresh_token);
     localStorage.setItem('expires_in', data.expires_in);
   }
+
+  
   resetToken() {
     this.data.refresh_token = localStorage.getItem('refresh_token');
     return this.http.post(`${this.baseUrl}/oauth/token`, this.data).subscribe(
@@ -37,6 +43,7 @@ export class TokenService {
     localStorage.setItem('expires_in', data.expires_in);
   }
   deleteToken() {
+    
     localStorage.removeItem('access_token');
     localStorage.removeItem('refresh_token');
     localStorage.removeItem('expires_in');
