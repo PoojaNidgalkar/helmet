@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
     handleSignup(data) {
     console.log(data);
     if (data.status === 'success') {
-      this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/profile');
     }
     }
     handelError(error) {

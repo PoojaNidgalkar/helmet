@@ -1,1 +1,45 @@
-<p>create works!</p>
+<div class="container">
+    <h1 class="my-4">New Product</h1>
+    <form #productCreateForm="ngForm" (ngSubmit)="newProduct()">
+
+      <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label"> Name</label>
+        <div class="col-sm-10">
+          <input id="name" type="text" name="name" [(ngModel)]=form.name class="form-control" placeholder=" Name" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="code" class="col-sm-2 col-form-label">Code</label>
+        <div class="col-sm-10">
+          <input id="code" type="text" name="code" [(ngModel)]=form.code class="form-control" placeholder="Code">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="price" class="col-sm-2 col-form-label">Price</label>
+        <div class="col-sm-10">
+          <input id="price" type="text" name="price" [(ngModel)]=form.price class="form-control" placeholder="Price" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="description" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+          <textarea id="description" name="description" [(ngModel)]=form.description class="form-control" placeholder="Description"> </textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="weight" class="col-sm-2 col-form-label">Approx.weight</label>
+        <div class="col-sm-10">
+          <input id="weight" type="text" name="weight" [(ngModel)]=form.weight class="form-control" placeholder="Weight" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="features" class="col-sm-2 col-form-label">Features</label>
+        <div class="col-sm-10">
+          <textarea id="features" name="features" [(ngModel)]=form.features class="form-control" placeholder="Features" required></textarea>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary" [disabled]="!productCreateForm.valid">Add Product</button>
+    </form>
+  </div>

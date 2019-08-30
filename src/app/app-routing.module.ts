@@ -45,12 +45,13 @@ const routes: Routes = [
   },
 
   {
-    path:'products/edit', 
+    
+    path:'products/:product/edit', 
     component:EditProductsComponent 
   },
 
   {
-    path:'products/show', 
+    path:'products/:product', 
     component:ShowProductsComponent 
   },
 

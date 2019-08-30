@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
   }
   handleResponse(data) {
     this.token.setToken(data);
-    this.router.navigateByUrl('/products');
+    this.router.navigateByUrl('/profile');
   }
   handelError(error) {
     this.error = error.error.error;
