@@ -9,7 +9,6 @@ import { ProductsService } from 'src/app/services/products.service';
 export class EditComponent implements OnInit {
   public form = {
     name: null,
-  
     code: null,
     price: null,
     description: null,
@@ -22,7 +21,8 @@ export class EditComponent implements OnInit {
 
   ngOnInit() { 
     const product_id = this.route.snapshot.paramMap.get('product');
-    this.productService.getProducts().subscribe(
+  
+       this.productService.getProduct(product_id).subscribe(
     data => this.handleResponse(data),
     error => this.handelError(error)
   );
@@ -30,17 +30,22 @@ export class EditComponent implements OnInit {
 handleResponse(data) {
   this.form = data;
 }
-updateClient() {
+updateProduct() {
 // tslint:disable-next-line: variable-name
   const product_id = this.route.snapshot.paramMap.get('product');
-  this.productService.updateProduct(this.form, product_id).subscribe(
-    data => this.handleResponse(data),
-    error => this.handelError(error)
+ 
+    this.productService.updateProduct(this.form,product_id).subscribe(
+    error => this.handelError(error),
+    
+
   );
 }
+
+
+
 handelError(error) {
- 
-  this.error = error.error.error;
+  console.log(error);
+  // this.error = error.error.error;
    }
 }
 

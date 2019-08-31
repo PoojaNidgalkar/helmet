@@ -44,12 +44,14 @@ export class ProductsService {
         Authorization: 'Bearer ' + this.token.getToken()
       })
     };
+    console.log(data, product_id);
     return this.http.patch(`${this.baseUrl}/api/products/${product_id}`, data, options);
   }
 // tslint:disable-next-line: variable-name
-  deleteProduct(product_id: any) {
+  deleteProduct(product_id) {
     const options = {
       headers: new HttpHeaders({
+      
         Accept: 'application/json',
         Authorization: 'Bearer ' + this.token.getToken()
       })
