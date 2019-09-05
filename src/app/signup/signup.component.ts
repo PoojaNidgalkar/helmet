@@ -35,6 +35,7 @@ export class SignupComponent implements OnInit {
       this.router.navigateByUrl('/profile');
     }
     }
+    
     handelError(error) {
       this.error = error.error.error;
     }

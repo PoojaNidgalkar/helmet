@@ -56,6 +56,9 @@ export class ProductsService {
         Authorization: 'Bearer ' + this.token.getToken()
       })
     };
+     
     return this.http.delete(`${this.baseUrl}/api/products/${product_id}`, options);
   }
+
+ 
 }
