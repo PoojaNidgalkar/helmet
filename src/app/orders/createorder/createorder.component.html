@@ -1,0 +1,66 @@
+<div class="container">
+        <h1 class="my-4">New Order</h1>
+        <form #orderCreateForm="ngForm" (ngSubmit)="newOrder()">
+         <table class="table table-striped table-bordered">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let field of fieldArray; let i = index">
+            <td>
+                <input [(ngModel)]="field.name" class="form-control" type="text" name="{{field.name}}" />
+            </td>
+            <td>
+                <input [(ngModel)]="field.quantity" class="form-control" type="number" name="{{field.quantity}}" />
+            </td>
+            <td>
+                <input [(ngModel)]="field.price" class="form-control" type="number" name="{{field.price}}" />
+            </td>
+            <td>
+                    <input [(ngModel)]="field.total" class="form-control" type="number" name="{{field.total}}" />
+            </td>
+            
+            <td>
+               <button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="form-control" type="text" id="newAttributeName" [(ngModel)]="newAttribute.name" name="newAttributeName" />
+            </td>
+            <td>
+                <input class="form-control" type="number" id="newAttributeQuantity" [(ngModel)]="newAttribute.quantity" name="newAttributeQuantity" />
+            </td>
+            <td>
+                <input class="form-control" type="number" id="newAttributePrice" [(ngModel)]="newAttribute.price" name="newAttributePrice" />
+            </td>
+            <td>
+                    <input class="form-control" type="number" id="newAttributeTotal" [(ngModel)]="newAttribute.total" name="newAttributeTotal" />
+            </td>
+            <td>
+                <button class="btn btn-default" type="button" (click)="addFieldValue()">Add</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Grandtotal</td>
+            <td>
+                    <input class="form-control" type="number" id="newAttributeGrandTotal" [(ngModel)]="newAttribute.grandtotal" name="newAttributeGrandTotal" />
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+
+<button type="submit" class="btn btn-primary" [disabled]="!orderCreateForm.valid">Add Order</button>
+
+</form>
+</div>

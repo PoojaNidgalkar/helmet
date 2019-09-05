@@ -11,10 +11,17 @@ import { FormsModule }   from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+
 import { CreateComponent } from './products/create/create.component';
 import { ProductsComponent } from './products/products.component';
 import { EditComponent } from './products/edit/edit.component';
 import { ShowComponent } from './products/show/show.component';
+
+import { OrdersComponent } from './orders/orders.component';
+import { CreateorderComponent } from './orders/createorder/createorder.component';
+import { EditorderComponent } from './orders/editorder/editorder.component';
+import { ShoworderComponent } from './orders/showorder/showorder.component';
+
 
 
 
@@ -26,10 +33,16 @@ import { ShowComponent } from './products/show/show.component';
     LoginComponent,
     SignupComponent,
     ProfileComponent,
-    CreateComponent,
+
     ProductsComponent,
+    CreateComponent,
     EditComponent,
-    ShowComponent
+    ShowComponent,
+
+    OrdersComponent,
+    CreateorderComponent,
+    EditorderComponent,
+    ShoworderComponent
   ],
   imports: [
     
