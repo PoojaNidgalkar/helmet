@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageComponent } from './page/page.component';
-import {FormComponent } from './form/form.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ProductsComponent } from './products/products.component';
-import { CreateComponent as CreateProductsComponent } from './products/create/create.component';
-import { ShowComponent as ShowProductsComponent } from './products/show/show.component';
-import { EditComponent as EditProductsComponent } from './products/edit/edit.component';
 
-import { OrdersComponent } from './orders/orders.component';
-import { CreateorderComponent as CreateOrdersComponent } from './orders/createorder/createorder.component';
-import { EditorderComponent as EditOrdersComponent } from './orders/editorder/editorder.component';
-import { ShoworderComponent as ShowOrdersComponent } from './orders/showorder/showorder.component';
+
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { ProfileComponent } from './auth/profile/profile.component';
+
+import { ProductsComponent } from './admin/products/products.component';
+import { CreateComponent as CreateProductsComponent } from './admin/products/create/create.component';
+import { ShowComponent as ShowProductsComponent } from './admin/products/show/show.component';
+import { EditComponent as EditProductsComponent } from './admin/products/edit/edit.component';
+
+import {FormComponent } from './shop/form/form.component';
+import { ProductdetailsComponent } from './shop/productdetails/productdetails.component';
+import { DetailsComponent } from './shop/details/details.component';
+
+import { OrderComponent } from './shop/order/order.component';
+
 
 const routes: Routes = [
   {
@@ -28,10 +31,7 @@ const routes: Routes = [
     path:'profile',
     component:ProfileComponent 
   },
-  {
-    path:'page', 
-    component:PageComponent 
-  },
+ 
 
   {
     path:'form', 
@@ -58,25 +58,20 @@ const routes: Routes = [
     path:'products/:product', 
     component:ShowProductsComponent 
   },
-//orders
+
   {
-    path: 'orders',
-    component: OrdersComponent
+    path:'productdetails', 
+    component:ProductdetailsComponent 
   },
 
   {
-    path:'orders/createorder', 
-    component:CreateOrdersComponent 
+    path:'details', 
+    component:DetailsComponent 
   },
 
   {
-     path:'orders/:order/editorder', 
-     component:EditOrdersComponent 
-  },
-
-  {
-    path:'orders/:order', 
-    component:ShowOrdersComponent 
+    path:'order', 
+    component:OrderComponent 
   },
 ];
 

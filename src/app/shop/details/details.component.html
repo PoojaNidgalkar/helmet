@@ -35,7 +35,17 @@
       <h6 class="text-muted">Optional Reflective Safety Decals</h6>
       <h6 class="text-muted">Adjustable Cam Dividers</h6>
       <h6 class="text-muted">Removable Visor</h6>
-      <br>
+      
+     
+      
+    <div class="text-muted" (click)="addToCart()"><b>Qty</b></div>
+     <div class="d-flex">
+         <button (click)="removeItem()" class="btnSign">-</button> 
+         <button>{{amount}}</button>
+         <button (click)="addItem()" class="btnSign">+</button>
+    </div>
+
+<br>
       <ul class="list-inline">
         <li class="list-inline-item text-muted">Sizes</li>
         <li  class="list-inline-item numberCircle text-muted body">S</li>
@@ -44,9 +54,6 @@
         <li class="list-inline-item float-right"><a href="#" target="_blank" >MORE</a></li>
       </ul>
       
-
-      
-      
       <div class="text-center">
         <input type="button" class="btn btn-info btn-success-bordered center-block  mr-4"
           value="Add to Cart" style="width:20%;">
@@ -54,22 +61,34 @@
           value="Amazon" style="width:20%;">
           <input type="button" class="btn btn-info btn-success-bordered center-block"
           value="Flipkart" style="width:20%;">
-         
-      </div>
+        </div>
     </div>
  
     <div class="col-sm-6 bg-neon-green">
       <div id="image1" class="cropcircle topright "></div>
           
           <i class="fas fa-bars float-right topright"></i>
-          <img src="/assets/images/icons8-favorite-cart-80.png" class="float-right mr-4"
-           width="5%" height="5%">
-           </div>
+          <img src="/assets/images/cart.png" alt="error" class="float-right mr-4" height=5% weight=5%>
+
+           <div class="d-flex justify-content-center">
+               <div class="pagination ">	
+              <input id="dot-1" type="radio" name="dots">	
+              <label for="dot-1"></label>	
+              <input id="dot-2" type="radio" name="dots">
+              <label for="dot-2"></label>	
+              <input id="dot-3" type="radio" name="dots" checked="checked">
+              <label for="dot-3"></label>	
+              <input id="dot-4" type="radio" name="dots">
+              <label for="dot-4"></label>	
+              <div class="pacman"></div>
+          </div>
+         </div> 
+       </div>
     </div>
   </div>
- <nav>
-   <a routerLink="/form">FORM</a>
- </nav>
- 
+
+  
 </body>
 </html>
+
+

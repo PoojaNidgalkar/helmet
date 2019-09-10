@@ -17,18 +17,19 @@
 
 
 .cropcircle{
-    width: 400px;
-    height: 400px;
-   margin: 50px;
-   border: 1px solid rgb(134, 131, 131);
+    width: 450px;
+    height: 450px;
+    margin: 75px;
+    border: 1px solid rgb(134, 131, 131);
     border-radius: 100%;
     background: rgb(230, 227, 227) no-repeat center;
     background-size: cover;
-}
+   }
 
 #image1{
-    background-image: url(/assets/images/helm.png);
-   }
+	background-image: url('/assets/images/helm.png');
+
+     }
  
 
 .bg-neon-green{
@@ -41,3 +42,5 @@
     right: 16px;
     font-size: 18px;
   }
+
+ 

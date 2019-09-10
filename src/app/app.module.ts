@@ -4,23 +4,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageComponent } from './page/page.component';
-import { FormComponent } from './form/form.component';
-import { LoginComponent } from './login/login.component';
+
+
+
+
+import { LoginComponent } from './auth/login/login.component';
 import { FormsModule }   from '@angular/forms';
-import { SignupComponent } from './signup/signup.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import {  HttpClientModule } from '@angular/common/http';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './auth/profile/profile.component';
 
-import { CreateComponent } from './products/create/create.component';
-import { ProductsComponent } from './products/products.component';
-import { EditComponent } from './products/edit/edit.component';
-import { ShowComponent } from './products/show/show.component';
+import { CreateComponent } from './admin/products/create/create.component';
+import { ProductsComponent } from './admin/products/products.component';
+import { EditComponent } from './admin/products/edit/edit.component';
+import { ShowComponent } from './admin/products/show/show.component';
 
-import { OrdersComponent } from './orders/orders.component';
-import { CreateorderComponent } from './orders/createorder/createorder.component';
-import { EditorderComponent } from './orders/editorder/editorder.component';
-import { ShoworderComponent } from './orders/showorder/showorder.component';
+import { FormComponent } from './shop/form/form.component';
+import { ProductdetailsComponent } from './shop/productdetails/productdetails.component';
+import { DetailsComponent } from './shop/details/details.component';
+
+import { OrderComponent } from './shop/order/order.component';
 
 
 
@@ -29,7 +32,7 @@ import { ShoworderComponent } from './orders/showorder/showorder.component';
   declarations: [
     AppComponent,
     FormComponent,
-    PageComponent,
+
     LoginComponent,
     SignupComponent,
     ProfileComponent,
@@ -39,10 +42,14 @@ import { ShoworderComponent } from './orders/showorder/showorder.component';
     EditComponent,
     ShowComponent,
 
-    OrdersComponent,
-    CreateorderComponent,
-    EditorderComponent,
-    ShoworderComponent
+    
+    ProductdetailsComponent,
+
+    
+    DetailsComponent,
+
+    
+    OrderComponent
   ],
   imports: [
     

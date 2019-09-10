@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ForService } from '../services/for.service';
+
+import { ForService } from 'src/app/services/for.service';
 import { Router } from '@angular/router';
-import { TokenService } from '../services/token.service';
+
+import { TokenService } from 'src/app/services/token.service';
 
 declare var tinymce: any;
 @Component({
