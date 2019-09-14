@@ -25,6 +25,11 @@ import { DetailsComponent } from './shop/details/details.component';
 
 import { OrderComponent } from './shop/order/order.component';
 
+import { StockComponent } from './admin/stock/stock.component';
+import { CreatestockComponent } from './admin/stock/createstock/createstock.component';
+import { EditstockComponent } from './admin/stock/editstock/editstock.component';
+import { ShowstockComponent } from './admin/stock/showstock/showstock.component';
+
 
 
 
@@ -41,15 +46,14 @@ import { OrderComponent } from './shop/order/order.component';
     CreateComponent,
     EditComponent,
     ShowComponent,
-
-    
     ProductdetailsComponent,
-
-    
     DetailsComponent,
-
+    OrderComponent,
     
-    OrderComponent
+    StockComponent,
+    CreatestockComponent,
+    EditstockComponent,
+    ShowstockComponent
   ],
   imports: [
     

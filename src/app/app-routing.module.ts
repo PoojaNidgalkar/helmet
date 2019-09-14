@@ -17,12 +17,17 @@ import { DetailsComponent } from './shop/details/details.component';
 
 import { OrderComponent } from './shop/order/order.component';
 
+import { StockComponent } from './admin/stock/stock.component';
+import { CreatestockComponent as CreateStockComponent } from './admin/stock/createstock/createstock.component';
+
+
 
 const routes: Routes = [
   {
     path:'login',
     component:LoginComponent
   },
+
   {
     path:'signup',
     component:SignupComponent 
@@ -32,7 +37,6 @@ const routes: Routes = [
     component:ProfileComponent 
   },
  
-
   {
     path:'form', 
     component:FormComponent 
@@ -49,7 +53,6 @@ const routes: Routes = [
   },
 
   {
-    
     path:'products/:product/edit', 
     component:EditProductsComponent 
   },
@@ -72,6 +75,16 @@ const routes: Routes = [
   {
     path:'order', 
     component:OrderComponent 
+  },
+
+  {
+    path:'stock', 
+    component:StockComponent 
+  },
+
+  {
+    path:'createstock/create', 
+    component: CreateStockComponent 
   },
 ];
 

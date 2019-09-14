@@ -2,7 +2,9 @@
     <h1 class="my-4">New Product</h1>
     <form #productCreateForm="ngForm" (ngSubmit)="newProduct()">
 
-      <div class="form-group">
+       
+
+       <div class="form-group">
         <label for="name" class="col-sm-2 col-form-label"> Name</label>
         <div class="col-sm-10">
           <input id="name" type="text" name="name" [(ngModel)]=form.name class="form-control" placeholder=" Name" required>

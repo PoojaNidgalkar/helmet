@@ -7,6 +7,9 @@ import {environment} from '../../environments/environment';
   providedIn: 'root'
 })
 export class ProductsService {
+  upload(formData: FormData, form: import("@angular/forms").FormGroup) {
+    throw new Error("Method not implemented.");
+  }
   private baseUrl = environment.baseUrl;
 
   constructor(private http: HttpClient, private token: TokenService) { }
@@ -17,8 +20,10 @@ export class ProductsService {
         Authorization: 'Bearer ' + this.token.getToken()
       })
     };
-    return this.http.get(`${this.baseUrl}/api/products`, options);
+    return this.http.get(`${this.baseUrl}/api/products/viewIndex`, options);
   }
+
+  
   getProduct(product) {
     const options = {
       headers : new HttpHeaders({

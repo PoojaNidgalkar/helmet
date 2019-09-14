@@ -1,0 +1,59 @@
+<div class="container">
+    <h1 class="my-4">New Stock</h1>
+    <form #stockCreateForm="ngForm" (ngSubmit)="newStock()">  
+
+      <div class="form-group">
+        <label for="text" class="col-sm-2 col-form-label">ProductId</label>
+        <div class="col-sm-10">
+          <input id="product_id" type="text" name="product_id" [(ngModel)]=form.product_id class="form-control" placeholder="productid" required>
+        </div>
+      </div>
+
+       <div class="form-group">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input id="name" type="text" name="name" [(ngModel)]="form.name" class="form-control" placeholder="name" required>
+        </div>
+      </div>
+
+      <img *ngFor='let url of urls' type="image" name="image" [src]="url" height="200"> <br/>
+
+      <input type='file' (change)="onSelectFile($event)" multiple>
+
+      <div class="form-group">
+        <label for="text" class="col-sm-2 col-form-label">MRP</label>
+        <div class="col-sm-10">
+          <input id="mrp" type="text" name="mrp" [(ngModel)]=form.mrp class="form-control" placeholder="MRP" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="text" class="col-sm-2 col-form-label">quantity</label>
+        <div class="col-sm-10">
+          <input id="quantity" type="number" name="quantity" [(ngModel)]=form.quantity class="form-control" placeholder="quantity" required>
+        </div>
+      </div>
+      <!-- <div class="form-group" (click)="addToCart()">Quantity</div>
+      <div class="d-flex">
+          <button (click)="removeItem()" class="btnSign">-</button> 
+          <button>{{amount}}</button>
+          <button (click)="addItem()" class="btnSign">+</button>
+     </div> -->
+
+      <div class="form-group">
+        <label for="discount" class="col-sm-2 col-form-label">Discount Value</label>
+        <div class="col-sm-10">
+          <input id="discount" type="text" name="discount" [(ngModel)]=form.discount class="form-control" placeholder="Discount" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="color" class="col-sm-2 col-form-label">Color</label>
+        <div class="col-sm-10">
+            <input id="color" type="text" name="color" [(ngModel)]=form.color class="form-control" placeholder="Color" required>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary" [disabled]="!stockCreateForm.valid">Add Stock</button>
+    </form>
+  </div>
+

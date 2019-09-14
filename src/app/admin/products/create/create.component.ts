@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -10,7 +11,7 @@ import { ProductsService } from 'src/app/services/products.service';
 export class CreateComponent implements OnInit {
 
   public form = {
-    
+   
     name: null,
     code: null,
     price: null,
@@ -20,6 +21,8 @@ export class CreateComponent implements OnInit {
     
   };
   public error = null;
+  
+
   constructor(private productService: ProductsService, private router: Router) { }
 
   ngOnInit() {
@@ -35,6 +38,8 @@ export class CreateComponent implements OnInit {
   handelError(error) {
     this.error = error.error.error;
   }
+
+ 
 }
 
 

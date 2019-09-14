@@ -1,0 +1,26 @@
+
+<div class="container">
+    <h1 class="my-4">
+     Stocks
+      <a [routerLink]="['/createstock/create']"  href="#" class="btn btn-primary float-right">New Stock</a>
+    </h1>
+    
+   
+      <table class="table">
+        <tr>
+          <th>Name</th>
+          <th>Stocks</th>
+          <th>Actions</th>           
+        </tr>
+        <tr *ngFor="let stock of stocks">
+          <td>{{stock.name}}</td>
+          <td>{{stock.stocks}}</td>
+          <td>
+            <a [routerLink]="['/stocks/'+stock.id]"  href="#" class="btn btn-info mr-2">View</a>
+            <a [routerLink]="['/stocks/'+stock.id] +'/edit'"  href="#" class="btn btn-success mr-2">Edit</a>
+            <button type="button" class="btn btn-danger" (click)="deletestock(stock.id)">Delete</button>
+         </td>
+        </tr>
+      </table>
+ 
+  </div>
