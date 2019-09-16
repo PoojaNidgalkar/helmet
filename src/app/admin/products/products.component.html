@@ -13,7 +13,7 @@
         </tr>
         <tr *ngFor="let product of products">
           <td>{{product.name}}</td>
-          <td>{{product.code}}</td>
+          <td>{{product.code}}</td> 
           <td>
             <a [routerLink]="['/products/'+product.id]"  href="#" class="btn btn-info mr-2">View</a>
             <a [routerLink]="['/products/'+product.id] +'/edit'"  href="#" class="btn btn-success mr-2">Edit</a>

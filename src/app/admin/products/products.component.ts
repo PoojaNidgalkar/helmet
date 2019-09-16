@@ -31,7 +31,6 @@ export class ProductsComponent implements OnInit {
   }
   handleResponse(data) {
     console.log(data);
-    
     this.products = data;
   }
   //delete by using refersh

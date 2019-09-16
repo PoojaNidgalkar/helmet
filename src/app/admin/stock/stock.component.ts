@@ -10,14 +10,15 @@ import { StockService } from 'src/app/services/stock.service';
 })
 export class StockComponent implements OnInit {
 
-  public stock: any;
-  
+  //nt display crud(stocks)
+  public stocks;
+
   public form: {
-    product_id: null
+    // product_id: null
   };
 
   http: any;
-  constructor(private product: StockService, private router: Router) { }
+  constructor(private stock: StockService, private router: Router) { }
 
 
   ngOnInit() {
@@ -25,18 +26,17 @@ export class StockComponent implements OnInit {
   }
 
   getStock() {
-    this.product.getStock().subscribe(
+    this.stock.getStock().subscribe(
       data => this.handleResponse(data),
       error => console.log(error)
     );
   }
   handleResponse(data) {
     console.log(data);
-    
-    this.stock = data;
+    this.stocks = data; //nt display crud(stocks)
+
   }
   
-
   //delete by using popup confirmation
     deleteStock(stockId:any) {
       if(confirm("Are you sure to delete "+stockId)) {

@@ -5,16 +5,15 @@
       <a [routerLink]="['/createstock/create']"  href="#" class="btn btn-primary float-right">New Stock</a>
     </h1>
     
-   
       <table class="table">
         <tr>
-          <th>Name</th>
-          <th>Stocks</th>
+          <th>ProductID</th>
+          <th>Quantity</th>
           <th>Actions</th>           
         </tr>
         <tr *ngFor="let stock of stocks">
-          <td>{{stock.name}}</td>
-          <td>{{stock.stocks}}</td>
+          <td>{{stock.product_id}}</td>
+          <td>{{stock.Quantity}}</td>
           <td>
             <a [routerLink]="['/stocks/'+stock.id]"  href="#" class="btn btn-info mr-2">View</a>
             <a [routerLink]="['/stocks/'+stock.id] +'/edit'"  href="#" class="btn btn-success mr-2">Edit</a>

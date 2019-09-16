@@ -62,6 +62,4 @@ export class CreatestockComponent implements OnInit {
     this.form.image = <Array<File>>event.target.files;
   }
   
- 
-
 }
