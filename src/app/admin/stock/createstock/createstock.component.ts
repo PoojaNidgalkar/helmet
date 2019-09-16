@@ -11,20 +11,22 @@ import { FormGroup } from '@angular/forms';
 export class CreatestockComponent implements OnInit {
 
   public form = {
-  product_id:null,
+    product_id:null,
     name: null,
     image: null,
     mrp: null,
     quantity:null,
     discount: null,
     color: null,
-    
-    
-  };
+ };
   public error = null;
   // public amount:number;
 
   constructor(private stockService: StockService, private router: Router) { }
+
+  ngOnInit() {
+    
+  }
   // addToCart(){
   //   this.amount = 1;
   //   }
@@ -39,15 +41,19 @@ export class CreatestockComponent implements OnInit {
   //   console.log('plus is : '+this.amount)
   //   }
   
+  // data to store and send data to server
   newStock() {
-    this.stockService.newStock(this.form).subscribe(
+      console.log(this.form);
+      this.stockService.newStock(this.form).subscribe(
       data => {
-        console.log(data);
-        // this.router.navigateByUrl('/stock');
+        console.log('Success!');
+        this.router.navigateByUrl('/stock');
       },
-      error => this.handelError(error)
+      error => console.log('Error!',error)
     );
-  }
+   }
+
+
   handelError(error) {
     this.error = error.error.error;
   }
@@ -56,7 +62,6 @@ export class CreatestockComponent implements OnInit {
     this.form.image = <Array<File>>event.target.files;
   }
   
-  ngOnInit() {
-  }
+ 
 
 }

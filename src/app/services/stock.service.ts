@@ -27,12 +27,13 @@ export class StockService {
   
   getStocks(stock) {
     const options = {
-      headers : new HttpHeaders({
+        headers : new HttpHeaders({
         Authorization: 'Bearer ' + this.token.getToken()
       })
     };
     return this.http.get(`${this.baseUrl}/api/stocks/${stock}`, options);
   }
+
   newStock(data) {
     const formData: any = new FormData();
     const files: Array<File> = data.image;
@@ -52,9 +53,8 @@ export class StockService {
     })
   };
   return this.http.post(`${this.baseUrl}/api/stocks`, formData,options)
-      
-    // return this.http.post(`${this.baseUrl}/api/stocks`, data, options);
-  }
+  // return this.http.post(`${this.baseUrl}/api/stocks`, data, options);
+  } 
 
   updateStock(data, stock_id) {
     const options = {
@@ -70,12 +70,10 @@ export class StockService {
   deleteStock(stock_id) {
     const options = {
       headers: new HttpHeaders({
-      
         Accept: 'application/json',
         Authorization: 'Bearer ' + this.token.getToken()
       })
     };
-     
     return this.http.delete(`${this.baseUrl}/api/stock/${stock_id}`, options);
   }
 
