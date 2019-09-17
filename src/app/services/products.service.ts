@@ -23,7 +23,7 @@ export class ProductsService {
     return this.http.get(`${this.baseUrl}/api/products/viewIndex`, options);
   }
 
-  
+  // show
   getProduct(product) {
     const options = {
       headers : new HttpHeaders({

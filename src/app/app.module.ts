@@ -46,6 +46,7 @@ import { ShowstockComponent } from './admin/stock/showstock/showstock.component'
     CreateComponent,
     EditComponent,
     ShowComponent,
+    
     ProductdetailsComponent,
     DetailsComponent,
     OrderComponent,

@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   baseUrl: 'http://192.168.29.28:8000',
-  client_id: '2',
-  client_secret: 'Hm6q8IuALgfLaNXGXNQY9i38Oj6lRbUKRuzr906W',
+  client_id: '3',
+  client_secret: 'IWWBeK73Z03kOgzYppV9mrgQefDYbp0IfGktFNSx',
 };
 
 /*

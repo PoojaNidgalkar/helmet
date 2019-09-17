@@ -24,7 +24,7 @@ export class StockService {
     return this.http.get(`${this.baseUrl}/api/stocks`, options);
   }
 
-  
+  // show  and edit stock details
   getStocks(stock) {
     const options = {
         headers : new HttpHeaders({
@@ -67,7 +67,7 @@ export class StockService {
     return this.http.patch(`${this.baseUrl}/api/stocks/${stock_id}`, data, options);
   }
 
-  deleteStock(stock_id) {
+  deletestock(stock_id) {
     const options = {
       headers: new HttpHeaders({
         Accept: 'application/json',

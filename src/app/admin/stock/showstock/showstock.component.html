@@ -1,1 +1,33 @@
-<p>showstock works!</p>
+<h1 class="text-center">Showing Stock Details</h1>
+<div class="container">
+    <table class="table">
+      
+      <tr>
+        <th>ProductId</th>
+        <td>{{ stock?.product_id }}</td>
+      </tr>
+      <tr>
+        <th>Image</th>
+        <td>{{ stock?.images }}</td>
+      </tr>
+      <tr>
+        <th>MRP</th>
+        <td>{{ stock?.Price }}</td>
+      </tr>
+      <tr>
+        <th>Quantity</th>
+        <td>{{ stock?.Quantity }}</td>
+      </tr>
+      <tr>
+        <th>Discount Value</th>
+        <td>{{ stock?.Discount }}</td>
+      </tr>
+      <tr>
+        <th>Color</th>
+        <td>{{ stock?.Color }}</td>
+      </tr>
+     
+    </table>
+ 
+  </div>
+

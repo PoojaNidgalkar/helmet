@@ -1,1 +1,47 @@
-<p>editstock works!</p>
+<div class="container">
+    <h1 class="my-4">Edit Stock</h1>
+    <form #stockUpdateForm=ngForm (ngSubmit)="updateStock()">
+        
+         <div class="form-group row">
+            <label class="col-sm-3 col-form-label">ProductId</label>
+            <div class="col-sm-9">
+              <input  type="text" name="product_id" [(ngModel)]=form.product_id class="form-control" placeholder="productid" required>
+            </div>
+         </div>
+          
+
+          <!-- image -->
+
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">MRP</label>
+            <div class="col-sm-9">
+              <input type="text" name="Price" [(ngModel)]=form.Price class="form-control" placeholder="MRP" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Quantity</label>
+            <div class="col-sm-9">
+              <input type="number" name="Quantity" [(ngModel)]=form.Quantity class="form-control" placeholder="quantity" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label  class="col-sm-3 col-form-label">Discount Value</label>
+            <div class="col-sm-9">
+              <input type="text" name="Discount" [(ngModel)]=form.Discount class="form-control" placeholder="Discount" required>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Color</label>
+            <div class="col-sm-9">
+                <input type="text" name="Color" [(ngModel)]=form.Color class="form-control" placeholder="Color" required>
+            </div>
+          </div>
+
+        
+        <button type="submit" class="btn btn-primary" [disabled]="!stockUpdateForm.valid">Update Stock</button>
+    </form>
+</div>
+

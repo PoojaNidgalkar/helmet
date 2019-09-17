@@ -2,7 +2,7 @@
 <div class="container">
     <h1 class="my-4">
      Stocks
-      <a [routerLink]="['/createstock/create']"  href="#" class="btn btn-primary float-right">New Stock</a>
+      <a [routerLink]="['/createstock/create']" class="btn btn-primary float-right">New Stock</a>
     </h1>
     
       <table class="table">
@@ -15,9 +15,9 @@
           <td>{{stock.product_id}}</td>
           <td>{{stock.Quantity}}</td>
           <td>
-            <a [routerLink]="['/stocks/'+stock.id]"  href="#" class="btn btn-info mr-2">View</a>
-            <a [routerLink]="['/stocks/'+stock.id] +'/edit'"  href="#" class="btn btn-success mr-2">Edit</a>
-            <button type="button" class="btn btn-danger" (click)="deletestock(stock.id)">Delete</button>
+            <a [routerLink]="['/stocks/'+stock.id]"  class="btn btn-info mr-2">View</a>
+            <a [routerLink]="['/stocks/'+stock.id] +'/edit'" class="btn btn-success mr-2">Edit</a>
+            <button type="button" class="btn btn-danger" (click)="deleteStock(stock.id)">Delete</button>
          </td>
         </tr>
       </table>

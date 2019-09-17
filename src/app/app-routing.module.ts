@@ -20,8 +20,7 @@ import { OrderComponent } from './shop/order/order.component';
 import { StockComponent } from './admin/stock/stock.component';
 import { CreatestockComponent as CreatestockComponent } from './admin/stock/createstock/createstock.component';
 import { ShowstockComponent as ShowstockComponent } from './admin/stock/showstock/showstock.component';
-
-
+import { EditstockComponent as EditstockComponent } from './admin/stock/editstock/editstock.component';
 
 const routes: Routes = [
   {
@@ -80,6 +79,7 @@ const routes: Routes = [
     
   },
 
+  //stock
   {
     path:'stock', 
     component:StockComponent 
@@ -91,9 +91,15 @@ const routes: Routes = [
   },
 
   {
-    path:'showstock/:show', 
+    path:'stocks/:stock', 
     component:ShowstockComponent 
   },
+
+  {
+    path:'stocks/:stock/edit', 
+    component:EditstockComponent 
+  },
+
 ];
 
 @NgModule({

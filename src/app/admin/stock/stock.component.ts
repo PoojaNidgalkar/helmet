@@ -10,7 +10,7 @@ import { StockService } from 'src/app/services/stock.service';
 })
 export class StockComponent implements OnInit {
 
-  //nt display crud(stocks)
+  // 1.nt display crud(stocks)
   public stocks;
 
   public form: {
@@ -33,14 +33,13 @@ export class StockComponent implements OnInit {
   }
   handleResponse(data) {
     console.log(data);
-    this.stocks = data; //nt display crud(stocks)
-
-  }
+    this.stocks = data; // 2.nt display crud(stocks)
+   }
   
   //delete by using popup confirmation
-    deleteStock(stockId:any) {
+  deleteStock(stockId:any) {
       if(confirm("Are you sure to delete "+stockId)) {
-        this.stock.deleteStock(stockId).subscribe(
+        this.stock.deletestock(stockId).subscribe(
               data => {
                 this.getStock();
               },
