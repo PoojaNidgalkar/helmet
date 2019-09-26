@@ -12,7 +12,7 @@ import { ShowComponent as ShowProductsComponent } from './admin/products/show/sh
 import { EditComponent as EditProductsComponent } from './admin/products/edit/edit.component';
 
 import {FormComponent } from './shop/form/form.component';
-import { ProductdetailsComponent } from './shop/productdetails/productdetails.component';
+
 import { DetailsComponent } from './shop/details/details.component';
 
 import { OrderComponent } from './shop/order/order.component';
@@ -63,10 +63,7 @@ const routes: Routes = [
     component:ShowProductsComponent 
   },
 
-  {
-    path:'productdetails', 
-    component:ProductdetailsComponent 
-  },
+
 
   {
     path:'details', 

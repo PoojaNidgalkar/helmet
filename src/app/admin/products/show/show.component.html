@@ -1,5 +1,51 @@
 <h1 class="text-center">Showing Product Details</h1>
-<div class="container">
+<div class="container-fluid">
+    <div class="row ">
+     <div class="col-sm-6">
+      <h3 class="text-dark ">Name:{{ product?.name }}</h3>
+      <h5 class=" text-dark">Code:{{ product?.code }}</h5>
+      <h5 class=" text-dark">MRP:{{ product?.mrp }}</h5>
+
+      
+      
+    </div>
+ 
+    <div class="col-sm-6">
+     
+        
+         
+          
+       </div>
+    </div>
+<br>
+   
+        
+          <input type="button" class="btn btn-warning btn-success-bordered center-block  mr-4"
+          value="Amazon">
+          <input type="button" class="btn btn-info btn-success-bordered center-block"
+          value="Flipkart">
+        
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
     <table class="table">
       
       <tr>
@@ -11,8 +57,8 @@
         <td>{{ product?.code }}</td>
       </tr>
       <tr>
-        <th>Price</th>
-        <td>{{ product?.price }}</td>
+        <th>MRP</th>
+        <td>{{ product?.mrp }}</td>
       </tr>
       <tr>
         <th>Description</th>
@@ -29,4 +75,4 @@
      
     </table>
  
-  </div>
+  </div> -->

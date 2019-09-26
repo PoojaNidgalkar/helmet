@@ -9,20 +9,20 @@
         </div>
       </div>
 
-      <img *ngFor='let url of urls' type="image" name="image" [src]="url" height="200"> <br/>
+      <img *ngFor='let url of urls' type="images" name="images" [src]="url" height="200"> <br/>
       <input type='file' (change)="onSelectFile($event)" multiple>
 
       <div class="form-group">
         <label for="text" class="col-sm-2 col-form-label">MRP</label>
         <div class="col-sm-10">
-          <input id="mrp" type="text" name="mrp" [(ngModel)]=form.mrp class="form-control" placeholder="MRP" required>
+          <input id="Price" type="text" name="Price" [(ngModel)]=form.Price class="form-control" placeholder="MRP" required>
         </div>
       </div>
       
       <div class="form-group">
         <label for="text" class="col-sm-2 col-form-label">Quantity</label>
         <div class="col-sm-10">
-          <input id="quantity" type="number" name="quantity" [(ngModel)]=form.quantity class="form-control" placeholder="quantity" required>
+          <input id="Quantity" type="number" name="Quantity" [(ngModel)]=form.Quantity class="form-control" placeholder="quantity" required>
         </div>
       </div>
       <!-- <div class="form-group" (click)="addToCart()">Quantity</div>
@@ -35,14 +35,14 @@
       <div class="form-group">
         <label for="discount" class="col-sm-2 col-form-label">Discount Value</label>
         <div class="col-sm-10">
-          <input id="discount" type="text" name="discount" [(ngModel)]=form.discount class="form-control" placeholder="Discount" required>
+          <input id="Discount" type="text" name="Discount" [(ngModel)]=form.Discount class="form-control" placeholder="Discount" required>
         </div>
       </div>
 
       <div class="form-group">
         <label for="color" class="col-sm-2 col-form-label">Color</label>
         <div class="col-sm-10">
-            <input id="color" type="text" name="color" [(ngModel)]=form.color class="form-control" placeholder="Color" required>
+            <input id="Color" type="text" name="Color" [(ngModel)]=form.Color class="form-control" placeholder="Color" required>
         </div>
       </div>
       

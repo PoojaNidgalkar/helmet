@@ -20,7 +20,7 @@ import { EditComponent } from './admin/products/edit/edit.component';
 import { ShowComponent } from './admin/products/show/show.component';
 
 import { FormComponent } from './shop/form/form.component';
-import { ProductdetailsComponent } from './shop/productdetails/productdetails.component';
+
 import { DetailsComponent } from './shop/details/details.component';
 
 import { OrderComponent } from './shop/order/order.component';
@@ -29,6 +29,7 @@ import { StockComponent } from './admin/stock/stock.component';
 import { CreatestockComponent } from './admin/stock/createstock/createstock.component';
 import { EditstockComponent } from './admin/stock/editstock/editstock.component';
 import { ShowstockComponent } from './admin/stock/showstock/showstock.component';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 
 
@@ -47,7 +48,7 @@ import { ShowstockComponent } from './admin/stock/showstock/showstock.component'
     EditComponent,
     ShowComponent,
     
-    ProductdetailsComponent,
+   
     DetailsComponent,
     OrderComponent,
     
@@ -62,6 +63,8 @@ import { ShowstockComponent } from './admin/stock/showstock/showstock.component'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    FroalaEditorModule.forRoot(), 
+    FroalaViewModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

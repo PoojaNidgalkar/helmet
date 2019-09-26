@@ -8,7 +8,8 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./show.component.css']
 })
 export class ShowComponent implements OnInit {
-  public product: null;
+  public products;
+
   constructor(private productService: ProductsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -21,7 +22,7 @@ export class ShowComponent implements OnInit {
       }
       handleResponse(data) {
         console.log(data);
-        this.product = data;
+        this.products = data;
       }
 
 }

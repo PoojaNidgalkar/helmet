@@ -10,7 +10,8 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ProductsComponent implements OnInit {
 
-  public products: null;
+  public products;
+
   public form: {
     product_id: null
   };

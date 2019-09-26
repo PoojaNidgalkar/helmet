@@ -12,12 +12,12 @@ export class CreatestockComponent implements OnInit {
 
   public form = {
     product_id:null,
-    name: null,
-    image: null,
-    mrp: null,
-    quantity:null,
-    discount: null,
-    color: null,
+   
+    images: null,
+    Price: null,
+    Quantity:null,
+    Discount: null,
+    Color: null,
  };
   public error = null;
   // public amount:number;
@@ -41,7 +41,7 @@ export class CreatestockComponent implements OnInit {
   //   console.log('plus is : '+this.amount)
   //   }
   
-  // data to store and send data to server
+  //store and send the data to server
   newStock() {
       console.log(this.form);
       this.stockService.newStock(this.form).subscribe(
@@ -59,7 +59,7 @@ export class CreatestockComponent implements OnInit {
   }
  
   onSelectFile(event) {
-    this.form.image = <Array<File>>event.target.files;
+    this.form.images = <Array<File>>event.target.files;
   }
   
 }

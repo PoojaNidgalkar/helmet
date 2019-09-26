@@ -35,16 +35,17 @@ export class StockService {
   }
 
   newStock(data) {
+
     const formData: any = new FormData();
     const files: Array<File> = data.image;
     for(let i =0; i < files.length; i++){
       formData.append("images[]", files[i], files[i]['name']);
   }
   formData.append('product_id', data.product_id);
-  formData.append('color', data.color);
-  formData.append('price', data.mrp);
-  formData.append('quantity', data.quantity);
-  formData.append('discount', data.discount);
+  formData.append('Color', data.color);
+  formData.append('Price', data.mrp);
+  formData.append('Quantity', data.quantity);
+  formData.append('Discount', data.discount);
 
   const options = {
     headers : new HttpHeaders({
@@ -52,9 +53,10 @@ export class StockService {
       Authorization: 'Bearer ' + this.token.getToken()
     })
   };
-  return this.http.post(`${this.baseUrl}/api/stocks`, formData,options)
+  return this.http.post(`${this.baseUrl}/api/stocks`, formData,options);
   // return this.http.post(`${this.baseUrl}/api/stocks`, data, options);
-  } 
+
+  }
 
   updateStock(data, stock_id) {
     const options = {
@@ -77,5 +79,4 @@ export class StockService {
     return this.http.delete(`${this.baseUrl}/api/stock/${stock_id}`, options);
   }
 
- 
 }
