@@ -70,7 +70,7 @@ public dynamicArray= [{
     
 //multi image
     getFileDetails (e) {
-      console.log (e.target.files);
+      // console.log (e.target.files);
       let array = []
       for (var i = 0; i < e.target.files.length; i++) { 
         this.myFiles.push(e.target.files[i]);

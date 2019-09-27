@@ -53,6 +53,7 @@ export class ProductsService {
   formData.append('description', data.description);
   formData.append('weight', data.weight);
   formData.append('features', data.features);
+
   data.color.forEach((color, index) => {
     console.log(color)
     formData.append('colors['+index+'][\'color\']', color.color)
@@ -62,6 +63,7 @@ export class ProductsService {
       formData.append('colors['+index+'][\'images\']['+i+']', image, image['name']);
     });
   });
+  
     const options = {
       headers : new HttpHeaders({
         Accept: 'application/json',
