@@ -17,32 +17,34 @@
             </div>
 
             <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Price</label>
+                <label class="col-sm-3 col-form-label">MRP</label>
                 <div class="col-sm-9">
-                    <input type="text" name="price" [(ngModel)]=form.price class="form-control" placeholder="Price">
-                </div>
-            </div>
-            
-            <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Description</label>
-                <div class="col-sm-9">
-                    <input type="text" name="description" [(ngModel)]=form.description class="form-control" placeholder="Description" required>
+                    <input type="text" name="mrp" [(ngModel)]=form.mrp class="form-control" placeholder="MRP">
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Approx.weight</label>
-                <div class="col-sm-9">
-                    <input type="text" name="weight" [(ngModel)]=form.weight class="form-control" placeholder="Weight">
-                </div>
+            <!-- <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">FeatureImage</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="image" [(ngModel)]=form.image class="form-control" placeholder="FeatureImage">
+                    </div>
             </div>
+
             <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Features</label>
-                <div class="col-sm-9">
-                    <input type="text" name="features" [(ngModel)]=form.features class="form-control" placeholder="Features" required>
-                </div>
+                    <label class="col-sm-3 col-form-label">Image</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="image" [(ngModel)]=form.image class="form-control" placeholder="Image">
+                    </div>
             </div>
-            
+
+            <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Color</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="color" [(ngModel)]=form.color class="form-control" placeholder="Color">
+                    </div>
+            </div> -->
+                
             <button type="submit" class="btn btn-primary" [disabled]="!productUpdateForm.valid">Update Product</button>
         </form>
+    
     </div>

@@ -35,7 +35,6 @@ export class StockService {
   }
 
   newStock(data) {
-
     const formData: any = new FormData();
     const files: Array<File> = data.image;
     for(let i =0; i < files.length; i++){

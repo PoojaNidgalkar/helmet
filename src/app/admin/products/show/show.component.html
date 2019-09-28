@@ -2,29 +2,48 @@
 <div class="container-fluid">
     <div class="row ">
      <div class="col-sm-6">
-      <h3 class="text-dark ">Name:{{ product?.name }}</h3>
-      <h5 class=" text-dark">Code:{{ product?.code }}</h5>
-      <h5 class=" text-dark">MRP:{{ product?.mrp }}</h5>
-
-      
-      
-    </div>
+        <table class="table">
+           <tr>
+              <th>Name:</th>
+              <td>{{product?.name }}</td>
+            </tr>
+             <tr>
+                <th>Code:</th>
+                <td>{{product?.code }}</td>
+              </tr>
+               <tr>
+                  <th>MRP:</th>
+                  <td>{{product?.mrp }}</td>
+                </tr>
+        </table>
+     </div>
  
     <div class="col-sm-6">
-     
-        
-         
-          
-       </div>
+        <tr>
+            <th>FeatureImage:</th>
+            <td> <img src="http://192.168.29.28:8000/api/storage/image?url={{product?.image}}" alt=""></td>
+          </tr>
+
+          <th>Images:</th>
+            <tr *ngFor="let images of product?.colors">
+              <td><img src="http://192.168.29.28:8000/api/storage/images?url={{product?.colors}}" alt=""></td>
+              <!-- <ng-container *ngFor="let images of product?.image_url">
+              <td>{{images.image_url}}</td>
+              </ng-container> -->
+             </tr>
+
+             <th>Colors:</th>
+              <tr *ngFor="let color of product?.colors">
+              <td>{{color.color }}</td>
+              </tr>
+          </div>
     </div>
 <br>
-   
-        
-          <input type="button" class="btn btn-warning btn-success-bordered center-block  mr-4"
-          value="Amazon">
-          <input type="button" class="btn btn-info btn-success-bordered center-block"
-          value="Flipkart">
-        
+    <input type="button" class="btn btn-warning btn-success-bordered center-block  mr-4"
+      value="Amazon">
+    <input type="button" class="btn btn-info btn-success-bordered center-block"
+     value="Flipkart">
+       
   </div>
 
 
@@ -45,34 +64,3 @@
 
 
 
-<!-- <div class="container">
-    <table class="table">
-      
-      <tr>
-        <th>Name</th>
-        <td>{{ product?.name }}</td>
-      </tr>
-      <tr>
-        <th>Code</th>
-        <td>{{ product?.code }}</td>
-      </tr>
-      <tr>
-        <th>MRP</th>
-        <td>{{ product?.mrp }}</td>
-      </tr>
-      <tr>
-        <th>Description</th>
-        <td>{{ product?.description }}</td>
-      </tr>
-      <tr>
-        <th>Approx.weighte</th>
-        <td>{{ product?.weight }}</td>
-      </tr>
-      <tr>
-        <th>Features</th>
-        <td>{{ product?.features }}</td>
-      </tr>
-     
-    </table>
- 
-  </div> -->

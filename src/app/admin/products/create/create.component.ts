@@ -28,6 +28,7 @@ public dynamicArray= [{
   image: [],
  
 }];
+
   public error = null;
   files = [];
 
@@ -50,6 +51,7 @@ public dynamicArray= [{
       color.image = files[0];
     });
     data.color = colors;
+    
     this.productService.newProduct(data).subscribe(
       data => {
         this.router.navigateByUrl('/products');
@@ -99,27 +101,6 @@ public dynamicArray= [{
 
     }
 
-  //multi images
-
-          // getFileDetails (e, index) {
-          //   console.log(index);
-          //   this.form.colors[index].color = this.dynamicArray[index].color;
-          //   this.form.colors[index].price = this.dynamicArray[index].price;
-          //   this.form.colors[index].image = <Array<File>>e.target.files;
-          // }        
-
-          // multiImages(){
-          //         console.log(this.multi);
-          //         this.productService.multiImages(this.multi).subscribe
-          //         ( 
-          //           data => console.log('success!',data),
-          //           error => console.log('error!',error)
-          //         )
-          //      }
-          //      handelError1(error) {
-          //       console.log(error);
-          //       this.error = error.error.error;
-          //   }
 }
   
 

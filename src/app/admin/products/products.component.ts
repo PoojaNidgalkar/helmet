@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -11,7 +10,6 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductsComponent implements OnInit {
 
   public products;
-
   public form: {
     product_id: null
   };
@@ -19,13 +17,12 @@ export class ProductsComponent implements OnInit {
   http: any;
   constructor(private product: ProductsService, private router: Router) { }
 
-
   ngOnInit() {
-    this.getProducts();
+    this.getProduct();
   }
 
-  getProducts() {
-    this.product.getProducts().subscribe(
+  getProduct() {
+    this.product.getProduct().subscribe(
       data => this.handleResponse(data),
       error => console.log(error)
     );
@@ -49,10 +46,22 @@ export class ProductsComponent implements OnInit {
       if(confirm("Are you sure to delete "+productId)) {
         this.product.deleteProduct(productId).subscribe(
               data => {
-                this.getProducts();
+                this.getProduct();
               },
         );
       }
     }
 }
+
+ 
+
+
+
+
+
+
+
+
+ 
+
 

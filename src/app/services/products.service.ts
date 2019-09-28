@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http'
 import { TokenService } from './token.service';
 import {environment} from '../../environments/environment';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -14,12 +13,10 @@ export class ProductsService {
   private baseUrl = environment.baseUrl;
 
   constructor(private http: HttpClient, private token: TokenService,private httpService: HttpClient) { }
-
   myFiles:string [] = [];
   sMsg:string = '';
 
-
-  getProducts() {
+  getProduct() {
     const options = {
       headers : new HttpHeaders({
         Authorization: 'Bearer ' + this.token.getToken()
@@ -29,7 +26,7 @@ export class ProductsService {
   }
 
   // show
-  getProduct(product) {
+  getProducts(product) {
     const options = {
       headers : new HttpHeaders({
         Authorization: 'Bearer ' + this.token.getToken()
@@ -38,6 +35,7 @@ export class ProductsService {
     return this.http.get(`${this.baseUrl}/api/products/${product}`, options);
   }
   
+
   //single image
   newProduct(data) {
     const formData: any = new FormData();
@@ -59,9 +57,9 @@ export class ProductsService {
     formData.append('colors['+index+'][\'color\']', color.color)
     formData.append('colors['+index+'][\'price\']', color.price)
     color.image.forEach((image, i) => {
-      console.log(image);
-      formData.append('colors['+index+'][\'images\']['+i+']', image, image['name']);
-    });
+                console.log(image);
+                formData.append('colors['+index+'][\'images\']['+i+']', image, image['name']);
+          });
   });
   
     const options = {
@@ -85,6 +83,8 @@ export class ProductsService {
     console.log(data, product_id);
     return this.http.patch(`${this.baseUrl}/api/products/${product_id}`, data, options);
   }
+
+
 // tslint:disable-next-line: variable-name
   deleteProduct(product_id) {
     const options = {
@@ -97,7 +97,6 @@ export class ProductsService {
      
     return this.http.delete(`${this.baseUrl}/api/products/${product_id}`, options);
   }
-
 
   // multi image
 
@@ -121,7 +120,19 @@ export class ProductsService {
     };
     return this.http.post(`${this.baseUrl}/api/products`, frmData, options);
   }
-
-
-
 }
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+

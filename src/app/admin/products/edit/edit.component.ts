@@ -10,10 +10,10 @@ export class EditComponent implements OnInit {
   public form = {
     name: null,
     code: null,
-    price: null,
-    description: null,
-    weight: null,
-    features: null,
+    mrp: null,
+    feature_image: null,
+    image: null,
+    color: null,
   };
   public error = null;
 
@@ -22,7 +22,7 @@ export class EditComponent implements OnInit {
   ngOnInit() { 
     const product_id = this.route.snapshot.paramMap.get('product');
   
-       this.productService.getProduct(product_id).subscribe(
+       this.productService.getProducts(product_id).subscribe(
     data => this.handleResponse(data),
     error => this.handelError(error)
   );
