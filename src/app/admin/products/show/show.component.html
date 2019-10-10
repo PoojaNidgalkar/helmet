@@ -25,24 +25,12 @@
         </tr>
 
         <th>Images:</th>
-            <tr *ngFor="let images of product?.colors">
-              <td>{{images.images}}</td>
-           
-            <tr *ngFor="let image_url of product?.images"> 
-                
-                <td> <img src="http://192.168.29.15:8000/api/storage/image?url={{image.image_url}}" alt=""></td>
-            </tr>
-
-            <!-- <tr *ngFor="let images of product?.colors">
-              <td>{{images.images}}</td>
-           
-            <tr *ngFor="let color of product?.colors">
-                <td> {{ color.color }} </td>
+           <tr *ngFor="let color of product?.colors">
                 <td *ngFor="let image of color.images"> 
                     <img src="http://192.168.29.15:8000/api/storage/image?url={{image.image_url}}" alt="" style="width:250px;height:200px;">
                 </td>
-            </tr> -->
-
+            </tr>
+<br>
             <th>Colors:</th>
                 <tr *ngFor="let color of product?.colors">
                     <td>{{color.color}}</td>
