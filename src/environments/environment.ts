@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://192.168.29.28:8000',
+  baseUrl: 'http://192.168.29.15:8000',
   client_id: '3',
   client_secret: 'qvHIPnNJCtclEprzVSRXNrfyBb2Je89ecloBTcPA',
 };

@@ -31,7 +31,7 @@ export class ProductsComponent implements OnInit {
     console.log(data);
     this.products = data;
   }
-  //delete by using refersh
+  // delete by using refersh
   // deleteProduct(productId: any) {
   //   this.product.deleteProduct(productId).subscribe(
   //     data => {

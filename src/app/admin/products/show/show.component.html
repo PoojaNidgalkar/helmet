@@ -3,39 +3,50 @@
     <div class="row ">
      <div class="col-sm-6">
         <table class="table">
-           <tr>
+          <tr>
               <th>Name:</th>
               <td>{{product?.name }}</td>
-            </tr>
+          </tr>
              <tr>
                 <th>Code:</th>
                 <td>{{product?.code }}</td>
               </tr>
-               <tr>
+              <tr>
                   <th>MRP:</th>
                   <td>{{product?.mrp }}</td>
-                </tr>
+              </tr>
         </table>
      </div>
  
     <div class="col-sm-6">
         <tr>
             <th>FeatureImage:</th>
-            <td> <img src="http://192.168.29.28:8000/api/storage/image?url={{product?.image}}" alt=""></td>
-          </tr>
+            <td> <img src="http://192.168.29.15:8000/api/storage/image?url={{product?.image}}" alt="" style="width:250px;height:200px;"></td>
+        </tr>
 
-          <th>Images:</th>
+        <th>Images:</th>
             <tr *ngFor="let images of product?.colors">
-              <td><img src="http://192.168.29.28:8000/api/storage/images?url={{product?.colors}}" alt=""></td>
-              <!-- <ng-container *ngFor="let images of product?.image_url">
-              <td>{{images.image_url}}</td>
-              </ng-container> -->
-             </tr>
+              <td>{{images.images}}</td>
+           
+            <tr *ngFor="let image_url of product?.images"> 
+                
+                <td> <img src="http://192.168.29.15:8000/api/storage/image?url={{image.image_url}}" alt=""></td>
+            </tr>
 
-             <th>Colors:</th>
-              <tr *ngFor="let color of product?.colors">
-              <td>{{color.color }}</td>
-              </tr>
+            <!-- <tr *ngFor="let images of product?.colors">
+              <td>{{images.images}}</td>
+           
+            <tr *ngFor="let color of product?.colors">
+                <td> {{ color.color }} </td>
+                <td *ngFor="let image of color.images"> 
+                    <img src="http://192.168.29.15:8000/api/storage/image?url={{image.image_url}}" alt="" style="width:250px;height:200px;">
+                </td>
+            </tr> -->
+
+            <th>Colors:</th>
+                <tr *ngFor="let color of product?.colors">
+                    <td>{{color.color}}</td>
+                </tr>
           </div>
     </div>
 <br>
@@ -47,7 +58,7 @@
   </div>
 
 
-
+ 
 
 
 

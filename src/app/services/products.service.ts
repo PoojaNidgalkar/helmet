@@ -29,7 +29,7 @@ export class ProductsService {
   getProducts(product) {
     const options = {
       headers : new HttpHeaders({
-        Authorization: 'Bearer ' + this.token.getToken()
+        Authorization: 'Bearer' + this.token.getToken()
       })
     };
     return this.http.get(`${this.baseUrl}/api/products/${product}`, options);
