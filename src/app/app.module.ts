@@ -5,6 +5,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+// import { NgbdCarouselConfig } from './carousel-config';
 
 
 
@@ -36,6 +39,8 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 @NgModule({
   declarations: [
+  
+
     AppComponent,
     FormComponent,
 
@@ -59,6 +64,8 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
   ],
   imports: [
     
+    NgbModule,
+
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -66,6 +73,9 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot()
   ],
+
+ 
+
   providers: [],
   bootstrap: [AppComponent]
 })
