@@ -24,7 +24,7 @@
     "angular-froala-wysiwyg": "^3.0.5",
     "bootstrap": "^4.3.1",
     "gulp": "^4.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-toastr": "^10.2.0",
     "popover": "^2.4.1",
     "popper.js": "^1.15.0",
